@@ -1,0 +1,14 @@
+0x0204000000040004 0x1000000000000000           FMUL.rp1                  r0             ,r4             ,r4             
+0x0300000088f40000 0x8a200ff000000000           FADD                      void           ,-PDC_1F        ,r0             
+                                               +SQRT                      r0             ,fwd            
+0x0300000088f40001 0x8a200ff010000000           FADD                      void           ,-PDC_1F        ,r1             
+                                               +SQRT                      r1             ,fwd            
+0x0300000000000004 0x8a300ff000000000           FADD                      void           ,r0             ,r4             
+                                               +LOG                       r0             ,fwd            
+0x0300000000010005 0x8a300ff010000000           FADD                      void           ,r1             ,r5             
+                                               +LOG                       r1             ,fwd            
+0x4b0000003f317218 0x0000002000000000           MOVIMM                    r2             ,0x3f317218     
+0x0200000020020000 0x960400000c000000           FMUL.rp1.dly1             r0             ,r2.rp0         ,r0             
+                                               +EMITF.ve                  vso[0].xy      ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

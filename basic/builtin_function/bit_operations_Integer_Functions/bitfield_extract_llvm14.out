@@ -1,0 +1,4 @@
+0x216020042008000c 0xb60000000c000000           BFE.s.crf3.ogl.rp3        r0             ,r4.rp0         ,r8.rp0         ,r12            
+                                               +EMITF.ve                  vso[0].xyzw    ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

@@ -1,0 +1,8 @@
+0x4b0000003fb8aa3b 0x0000000000000000           MOVIMM                    r0             ,0x3fb8aa3b     
+0x0200000000000004 0x8a440ff010000000           FMUL.dly1                 void           ,r0             ,r4             
+                                               +EXP                       r1             ,fwd            
+0x0200000000000005 0x8a400ff020000000           FMUL                      void           ,r0             ,r5             
+                                               +EXP                       r2             ,fwd            
+0x6000000000000001 0x100000000c000000           EMITF.ve                  vso[0].xy      ,r1             
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

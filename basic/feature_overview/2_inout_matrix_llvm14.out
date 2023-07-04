@@ -1,0 +1,12 @@
+0x03000000000c0004 0xa6000ff004000000           FADD.rp2                  void           ,r12            ,r4             
+                                               +EMITF                     vso[0].xyz     ,fwd            
+0x0300000000100008 0xa6000ff004000001           FADD.rp2                  void           ,r16            ,r8             
+                                               +EMITF                     vso[1].xyz     ,fwd            
+0x0300000000200014 0xa6000ff004000002           FADD.rp2                  void           ,r32            ,r20            
+                                               +EMITF                     vso[2].xyz     ,fwd            
+0x0300000000240018 0xa6000ff004000003           FADD.rp2                  void           ,r36            ,r24            
+                                               +EMITF                     vso[3].xyz     ,fwd            
+0x030000000028001c 0xa6000ff00c000004           FADD.rp2                  void           ,r40            ,r28            
+                                               +EMITF.ve                  vso[4].xyz     ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

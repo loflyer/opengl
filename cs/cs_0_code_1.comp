@@ -1,0 +1,33 @@
+#version 430 core
+layout(local_size_x = 16) in;
+layout(binding = 1, std430) buffer Input {
+  uvec4 data[16];
+} g_input;
+layout(std430, binding = 0) buffer Output {
+  uvec4 g_output[64];
+};
+subroutine void ComputeType();
+subroutine uniform ComputeType Compute[4];
+layout(binding = 0, offset = 0) uniform atomic_uint g_atomic_counter;
+layout(rgba32ui) readonly uniform uimageBuffer g_image_buffer;
+uniform usamplerBuffer g_sampler_buffer;
+subroutine(ComputeType)
+void Compute0() {
+  const uint index = atomicCounterIncrement(g_atomic_counter);
+  g_output[index] = uvec4(index);
+}
+subroutine(ComputeType)
+void Compute1() {
+  g_output[gl_GlobalInvocationID.x] = g_input.data[gl_LocalInvocationIndex];
+}
+subroutine(ComputeType)
+void Compute2() {
+  g_output[gl_GlobalInvocationID.x] = imageLoad(g_image_buffer, int(gl_LocalInvocationIndex));
+}
+subroutine(ComputeType)
+void Compute3() {
+  g_output[gl_GlobalInvocationID.x] = texelFetch(g_sampler_buffer, int(gl_LocalInvocationIndex));
+}
+void main() {
+  Compute[gl_WorkGroupID.x]();
+}

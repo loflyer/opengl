@@ -1,0 +1,7 @@
+0x33000000ffff0004 0x0000000000000000           ANDI                      r0             ,0xffff         ,r4             
+0x1801040000000000 0x86040ff004000000           FLCVT.rne.sl16.h2f.dly1   void           ,r0             
+                                               +EMITF                     vso[0].x       ,fwd            
+0x1801080000000004 0x86000ff00d000000           FLCVT.rne.sh16.h2f        void           ,r4             
+                                               +EMITF.ve                  vso[0].y       ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

@@ -1,0 +1,35 @@
+#version 450
+
+layout(local_size_x = 64, local_size_y = 1, local_size_z = 1) in;
+layout(std430, binding = 0) buffer Output {
+  uint g_uint_out[64];
+  int g_int_out[64];
+};
+shared uint g_shared_uint[64];
+shared int g_shared_int[64];
+uniform uint g_uint_value[8] = uint[8](3u, 1u, 2u, 0x1u, 0x3u, 0x1u, 0x2u, 0x7u);
+void main() {
+
+uint index = gl_LocalInvocationID.y*64+gl_LocalInvocationID.x;
+
+  atomicExchange(g_shared_uint[index], g_uint_value[0]);
+  atomicMin(g_shared_uint[index], g_uint_value[1]);
+  atomicMax(g_shared_uint[index], g_uint_value[2]);
+  atomicAnd(g_shared_uint[index], g_uint_value[3]);
+  atomicOr(g_shared_uint[index], g_uint_value[4]);
+  atomicXor(g_shared_uint[index], g_uint_value[5]);
+  atomicCompSwap(g_shared_uint[index], g_uint_value[6], g_uint_value[7]);
+
+  atomicExchange(g_shared_int[index], 3);
+  atomicMin(g_shared_int[index], 1);
+  atomicMax(g_shared_int[index], 2);
+  atomicAnd(g_shared_int[index], 0x1);
+  if (g_uint_value[1] > 0u) {
+    atomicOr(g_shared_int[index], 0x3);
+    atomicXor(g_shared_int[index], 0x1);
+    atomicCompSwap(g_shared_int[index], 0x2, 0x7);
+  }
+
+  g_uint_out[index] = g_shared_uint[index];
+  g_int_out[index] = g_shared_int[index];
+}

@@ -1,0 +1,4 @@
+0x3c00000000000004 0xa6000ff00c000000           CBS.rp2                   void           ,r4             
+                                               +EMITF.ve                  vso[0].xyz     ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

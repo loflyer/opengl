@@ -1,0 +1,16 @@
+0x3d00000000000004 0x2000000000000000           FFB.h2l.rp2               r0             ,r4             
+0x0a400000001f8000 0x0000003000000000           IADDI.s                   r3             ,31             ,-r0            
+0x39404000ffff0000 0x00000f2000000000           ICMPI.s.eq                p2             ,-1             ,r0             
+0x0a400000001f8001 0x0000000000000000           IADDI.s                   r0             ,31             ,-r1            
+0x0a400000001f8002 0x0000004000000000           IADDI.s                   r4             ,31             ,-r2            
+0x204000f208f90003 0x86000ff004000001           SEL.s                     void           ,p2             ,PDC_1IN        ,r3             
+                                               +EMITF                     vso[1].x       ,fwd            
+0x39404000ffff0001 0x00000f2000000000           ICMPI.s.eq                p2             ,-1             ,r1             
+0x39404000ffff0002 0x00000f3000000000           ICMPI.s.eq                p3             ,-1             ,r2             
+0x204000f208f90000 0x86000ff005000001           SEL.s                     void           ,p2             ,PDC_1IN        ,r0             
+                                               +EMITF                     vso[1].y       ,fwd            
+0x204000f308f90004 0x86000ff006000001           SEL.s                     void           ,p3             ,PDC_1IN        ,r4             
+                                               +EMITF                     vso[1].z       ,fwd            
+0x60000000000008f0 0x200000000c000000           EMITF.ve                  vso[0].xyz     ,PDC_0          
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

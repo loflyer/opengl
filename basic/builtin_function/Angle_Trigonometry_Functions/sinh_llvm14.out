@@ -1,0 +1,18 @@
+0x4b0000003fb8aa3b 0x0000000000000000           MOVIMM                    r0             ,0x3fb8aa3b     
+0x4b000000bfb8aa3b 0x0000001000000000           MOVIMM                    r1             ,0xbfb8aa3b     
+0x0200000000000004 0x8a400ff020000000           FMUL                      void           ,r0             ,r4             
+                                               +EXP                       r2             ,fwd            
+0x0200000000010004 0x8a400ff030000000           FMUL                      void           ,r1             ,r4             
+                                               +EXP                       r3             ,fwd            
+0x0200000000000005 0x8a400ff000000000           FMUL                      void           ,r0             ,r5             
+                                               +EXP                       r0             ,fwd            
+0x0200000000010005 0x8a400ff010000000           FMUL                      void           ,r1             ,r5             
+                                               +EXP                       r1             ,fwd            
+0x0304000080030002 0x0000002000000000           FADD                      r2             ,-r3            ,r2             
+0x0304000080010000 0x0000000000000000           FADD                      r0             ,-r1            ,r0             
+0x0200000008f30002 0x86000ff004000000           FMUL                      void           ,PDC_050F       ,r2             
+                                               +EMITF                     vso[0].x       ,fwd            
+0x0200000008f30000 0x86000ff00d000000           FMUL                      void           ,PDC_050F       ,r0             
+                                               +EMITF.ve                  vso[0].y       ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

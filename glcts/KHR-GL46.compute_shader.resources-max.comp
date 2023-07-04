@@ -1,0 +1,22 @@
+#version 430 core
+
+layout(local_size_x = 4) in;
+layout(std140, binding = 0) buffer ShaderStorageBlock {
+ double data;
+} g_shader_storage[4];
+layout(std140, binding = 0) uniform UniformBlock {
+ double data;
+} g_uniform[2];
+uniform dvec2 g_uniform_def;
+
+void main() {
+ if (gl_GlobalInvocationID.x == 0) {
+ g_shader_storage[0].data = floor(g_uniform[0].data + 0.1LF);
+ } else if (gl_GlobalInvocationID.x == 1) {
+ g_shader_storage[1].data = ceil(g_uniform[1].data + 0.2LF);
+ } else if (gl_GlobalInvocationID.x == 2) {
+ g_shader_storage[2].data = min(g_uniform_def[0] + 0.1LF, 1.0LF);
+ } else if (gl_GlobalInvocationID.x == 3) {
+ g_shader_storage[3].data = max(g_uniform_def[0], g_uniform_def.y);
+ }
+}

@@ -1,0 +1,16 @@
+0x2c04200000040008 0x00000f2000000000           ICMP.lt                   p2             ,r4             ,r8             
+0x2c04200000050009 0x00000f3000000000           ICMP.lt                   p3             ,r5             ,r9             
+0x2c0420000006000a 0x00000f4000000000           ICMP.lt                   p4             ,r6             ,r10            
+0x2c0420000007000b 0x00000f5000000000           ICMP.lt                   p5             ,r7             ,r11            
+0x33000000000100f2 0x86000ff004000001           ANDI                      void           ,0x1            ,p2             
+                                               +EMITF                     vso[1].x       ,fwd            
+0x33000000000100f3 0x86000ff005000001           ANDI                      void           ,0x1            ,p3             
+                                               +EMITF                     vso[1].y       ,fwd            
+0x33000000000100f4 0x86000ff006000001           ANDI                      void           ,0x1            ,p4             
+                                               +EMITF                     vso[1].z       ,fwd            
+0x33000000000100f5 0x86000ff007000001           ANDI                      void           ,0x1            ,p5             
+                                               +EMITF                     vso[1].w       ,fwd            
+0x0740000080040008 0xb6000ff00c000000           IADD.s.rp3                void           ,-r4            ,r8             
+                                               +EMITF.ve                  vso[0].xyzw    ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

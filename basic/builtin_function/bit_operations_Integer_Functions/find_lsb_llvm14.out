@@ -1,0 +1,6 @@
+0x3d20000000000008 0x86000ff004000001           FFB.l2h                   void           ,r8             
+                                               +EMITF                     vso[1].x       ,fwd            
+0x3d20000000000004 0x86000ff00c000000           FFB.l2h                   void           ,r4             
+                                               +EMITF.ve                  vso[0].x       ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

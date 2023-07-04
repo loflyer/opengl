@@ -1,0 +1,14 @@
+0x0304000080040008 0x0000000000000000           FADD                      r0             ,-r4            ,r8             
+0x0304000080100014 0x1000001000000000           FADD.rp1                  r1             ,-r16           ,r20            
+0x03040000801c0020 0x2000005000000000           FADD.rp2                  r5             ,-r28           ,r32            
+0x030400008028002c 0x3000008000000000           FADD.rp3                  r8             ,-r40           ,r44            
+0x012000040000000c 0x86000ff004000003           MAD.crf3                  void           ,r4             ,r0             ,r12            
+                                               +EMITF                     vso[3].x       ,fwd            
+0x0120001000010018 0x96000ff004000000           MAD.crf3.rp1              void           ,r16            ,r1             ,r24            
+                                               +EMITF                     vso[0].xy      ,fwd            
+0x0120001c00050024 0xa6000ff004000001           MAD.crf3.rp2              void           ,r28            ,r5             ,r36            
+                                               +EMITF                     vso[1].xyz     ,fwd            
+0x0120002800080030 0xb6000ff00c000002           MAD.crf3.rp3              void           ,r40            ,r8             ,r48            
+                                               +EMITF.ve                  vso[2].xyzw    ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

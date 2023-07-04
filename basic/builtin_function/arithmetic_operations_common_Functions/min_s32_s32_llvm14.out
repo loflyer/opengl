@@ -1,0 +1,16 @@
+0x2b44000020280024 0x1000000000000000           IMIN.s.rp1                r0             ,r40.rp0        ,r36            
+0x2b4400002030002c 0x2000005000000000           IMIN.s.rp2                r5             ,r48.rp0        ,r44            
+0x2b44000020380034 0x3000024000000000           IMIN.s.rp3                r36            ,r56.rp0        ,r52            
+0x6000000000000000 0x1000000004000003           EMITF                     vso[3].xy      ,r0             
+0x6000000000000005 0x2000000004000004           EMITF                     vso[4].xyz     ,r5             
+0x6000000000000024 0x3000000004000005           EMITF                     vso[5].xyzw    ,r36            
+0x2b40000000080004 0x86000ff004000006           IMIN.s                    void           ,r8             ,r4             
+                                               +EMITF                     vso[6].x       ,fwd            
+0x2b4000000010000c 0x96000ff004000000           IMIN.s.rp1                void           ,r16            ,r12            
+                                               +EMITF                     vso[0].xy      ,fwd            
+0x2b40000000180014 0xa6000ff004000001           IMIN.s.rp2                void           ,r24            ,r20            
+                                               +EMITF                     vso[1].xyz     ,fwd            
+0x2b4000000020001c 0xb6000ff00c000002           IMIN.s.rp3                void           ,r32            ,r28            
+                                               +EMITF.ve                  vso[2].xyzw    ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

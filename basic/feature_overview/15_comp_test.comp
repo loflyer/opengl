@@ -1,0 +1,26 @@
+#version 450
+precision highp float;
+
+layout(local_size_x = 1) in;
+
+struct Outputs
+{
+    highp int out0;
+};
+
+layout(binding = 1, std430) buffer OutBuffer
+{
+    Outputs outputs[];
+};
+
+void main (void)
+{
+    uint invocationNdx = gl_NumWorkGroups.x*gl_NumWorkGroups.y*gl_WorkGroupID.z
+                       + gl_NumWorkGroups.x*gl_WorkGroupID.y + gl_WorkGroupID.x;
+    highp int out0;
+
+    float array[int(float (1.0) + cos(float (0.7)))];
+    out0 = array.length();
+
+    outputs[invocationNdx].out0 = out0;
+}

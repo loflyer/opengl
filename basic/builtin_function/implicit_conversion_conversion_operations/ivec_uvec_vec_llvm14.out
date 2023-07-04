@@ -1,0 +1,17 @@
+0x600000000000000c 0x3000000004000002           EMITF                     vso[2].xyzw    ,r12            
+0x6000000000000008 0x2000000004000001           EMITF                     vso[1].xyz     ,r8             
+0x6000000000000004 0x1000000004000000           EMITF                     vso[0].xy      ,r4             
+0x1740002000000010 0x96000ff004000003           FX2FP.s.rne.rp1           void           ,r16.32.0       
+                                               +EMITF                     vso[3].xy      ,fwd            
+0x1700002000000014 0x96000ff004000004           FX2FP.rne.rp1             void           ,r20.32.0       
+                                               +EMITF                     vso[4].xy      ,fwd            
+0x1740002000000018 0xa6000ff004000005           FX2FP.s.rne.rp2           void           ,r24.32.0       
+                                               +EMITF                     vso[5].xyz     ,fwd            
+0x170000200000001c 0xa6000ff004000006           FX2FP.rne.rp2             void           ,r28.32.0       
+                                               +EMITF                     vso[6].xyz     ,fwd            
+0x1740002000000020 0xb6000ff004000007           FX2FP.s.rne.rp3           void           ,r32.32.0       
+                                               +EMITF                     vso[7].xyzw    ,fwd            
+0x1700002000000024 0xb6000ff00c000008           FX2FP.rne.rp3             void           ,r36.32.0       
+                                               +EMITF.ve                  vso[8].xyzw    ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

@@ -1,0 +1,13 @@
+#version 450 core
+
+layout (location = 0) in  vec4 inData[2];
+layout (location = 0) out vec4 outData[2];
+
+layout(std430) buffer Buffer {
+  vec4 position[3];
+} g_input_buffer;
+void main() {
+  gl_Position = g_input_buffer.position[gl_VertexID];
+  outData[0] = inData[0];
+  outData[1] = inData[1];
+}

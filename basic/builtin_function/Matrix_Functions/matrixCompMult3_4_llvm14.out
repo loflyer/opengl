@@ -1,0 +1,10 @@
+0x0200000000140004 0xa6000ff004000000           FMUL.rp2                  void           ,r20            ,r4             
+                                               +EMITF                     vso[0].xyz     ,fwd            
+0x0200000000180008 0xa6000ff004000001           FMUL.rp2                  void           ,r24            ,r8             
+                                               +EMITF                     vso[1].xyz     ,fwd            
+0x02000000001c000c 0xa6000ff004000002           FMUL.rp2                  void           ,r28            ,r12            
+                                               +EMITF                     vso[2].xyz     ,fwd            
+0x0200000000200010 0xa6000ff00c000003           FMUL.rp2                  void           ,r32            ,r16            
+                                               +EMITF.ve                  vso[3].xyz     ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+

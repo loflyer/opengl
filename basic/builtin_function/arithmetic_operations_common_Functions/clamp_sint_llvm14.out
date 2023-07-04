@@ -1,0 +1,20 @@
+0x2a44000000080004 0x0000000000000000           IMAX.s                    r0             ,r8             ,r4             
+0x2a44000000140010 0x0000001000000000           IMAX.s                    r1             ,r20            ,r16            
+0x2a4400000020001c 0x0000002000000000           IMAX.s                    r2             ,r32            ,r28            
+0x2a44000000080005 0x0000003000000000           IMAX.s                    r3             ,r8             ,r5             
+0x2a44000020140011 0x1000004000000000           IMAX.s.rp1                r4             ,r20.rp0        ,r17            
+0x2a4400002020001d 0x2000006000000000           IMAX.s.rp2                r6             ,r32.rp0        ,r29            
+0x2b400000000c0000 0x86000ff004000002           IMIN.s                    void           ,r12            ,r0             
+                                               +EMITF                     vso[2].x       ,fwd            
+0x2b40000000180001 0x86000ff004000000           IMIN.s                    void           ,r24            ,r1             
+                                               +EMITF                     vso[0].x       ,fwd            
+0x2b40000000240002 0x86000ff004000001           IMIN.s                    void           ,r36            ,r2             
+                                               +EMITF                     vso[1].x       ,fwd            
+0x2b400000000c0003 0x86000ff005000002           IMIN.s                    void           ,r12            ,r3             
+                                               +EMITF                     vso[2].y       ,fwd            
+0x2b40000020180004 0x96000ff005000000           IMIN.s.rp1                void           ,r24.rp0        ,r4             
+                                               +EMITF                     vso[0].yz      ,fwd            
+0x2b40000020240006 0xa6000ff00d000001           IMIN.s.rp2                void           ,r36.rp0        ,r6             
+                                               +EMITF.ve                  vso[1].yzw     ,fwd            
+0xc300000000000000 0x0000000000000000           JUMP                      0              
+
